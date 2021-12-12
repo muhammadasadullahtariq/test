@@ -1,0 +1,40 @@
+const arr = [
+  [
+    ["Renewal Fee", 12],
+    ["Active Listing", 2],
+    ["Listing Period", "7 days"],
+    ["Premium Listing Credit", "Yes"],
+    ["Free social media", "Yes"],
+    ["Premium Classified Credit", 0],
+    ["Article Quota", "Yes"],
+    ["Premium Article Credit", "Yes"],
+    ["Multiple Selection", 3],
+    ["Live Updates", "No"],
+  ],
+  [
+    ["Renewal Fee", 60],
+    ["Active Listing", 60],
+    ["Listing Period", "Unlimited"],
+    ["Premium Listing Credit", "Yes"],
+    ["Free social media", "Yes"],
+    ["Premium Classified Credit", 100],
+    ["Article Quota", "Yes"],
+    ["Premium Article Credit", "Yes"],
+    ["Multiple Selection", 10],
+    ["Live Updates", "Yes"],
+  ],
+  [
+    ["Renewal Fee", 75],
+    ["Active Listing", 300],
+    ["Listing Period", "Unlimited"],
+    ["Premium Listing Credit", "Yes"],
+    ["Free social media", "Yes"],
+    ["Premium Classified Credit", 400],
+    ["Article Quota", "Yes"],
+    ["Premium Article Credit", "Yes"],
+    ["Multiple Selection", 50],
+    ["Live Updates", "Yes"],
+  ],
+];
+
+export default arr;
