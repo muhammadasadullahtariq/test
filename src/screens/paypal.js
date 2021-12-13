@@ -96,6 +96,7 @@ export default class Main extends React.Component {
     return (
       //   <View style={styles.container}>
       <WebView
+        useWebKit={true}
         source={{ uri: _this.state.test }}
         style={{ flex: 1, width: "100%", height: "100%" }}
         onLoadStart={() => {}}
