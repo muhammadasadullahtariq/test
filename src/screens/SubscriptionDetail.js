@@ -82,6 +82,7 @@ export default class Main extends React.Component {
 
   onPress = () => {
     console.log("i Called");
+    console.log("URL is", this.state.test);
     _this.props.navigation.navigate("Paypal", {
       link: this.state.test,
     });

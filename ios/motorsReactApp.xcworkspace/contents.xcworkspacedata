@@ -2,12 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:motorsReactApp.xcodeproj">
+      location = "group:/Users/mac/E work/React native/Motors/Results/new/test/ios/Thousand under.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:motorsReactApp.xcodeproj">
+      location = "group:/Users/mac/E work/React native/Motors/Results/new/test/ios/thousandUnder.xcodeproj">
    </FileRef>
 </Workspace>

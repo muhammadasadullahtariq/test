@@ -11,11 +11,11 @@
     "react-test-renderer": "16.3.1"
   },
   "scripts": {
+    "build_ios": "react-native bundle --minify --entry-file index.js --platform ios --dev false --bundle-output ./ios/main.jsbundle --assets-dest ./ios",
     "start": "npx jetify; react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "jest",
-    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'"
+    "test": "jest"
   },
   "jest": {
     "preset": "react-native"

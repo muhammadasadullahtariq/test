@@ -85,7 +85,7 @@ export default class Main extends React.Component {
           />
           <Text
             componentStyle={{ textAlign: "center" }}
-            text={"We offer three different plan user can to any one"}
+            text={"We offer three different plan user can Subscribe to any one"}
           />
         </View>
         <View style={{ flex: 2 }}>

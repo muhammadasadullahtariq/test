@@ -69,10 +69,11 @@ export default class Filter extends React.Component {
         elevation: 5,
       },
       headerTitle: (
-        <View style={styles.appMainTitle}>
-          <Text style={styles.center}>
-            <Translation str="filter" />
-          </Text>
+        <View style={{ flex: 1, justifyContent: "center" }}>
+          <Image
+            style={{ width: "auto", height: 50, resizeMode: "contain" }}
+            source={require("../assets/img/logo-dark.png")}
+          />
         </View>
       ),
       headerLeft: (

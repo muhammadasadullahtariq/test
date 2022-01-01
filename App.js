@@ -86,7 +86,10 @@ class App extends React.Component {
               this.notificationListener();
 
               if (fcmToken) {
-                AsyncStorage.setItem("device_id", fcmToken);
+                AsyncStorage.setItem(
+                  "device_id",
+                  String(JSON.stringify(fcmToken))
+                );
                 firebase
                   .database()
                   .ref("/users/" + Math.floor(Math.random() * Math.floor(1000)))
@@ -114,7 +117,7 @@ class App extends React.Component {
           });
       } else if (deviceId != null && deviceId != fcmToken) {
         console.log("FCM GET TOKEN: ", "DEVICE NOT EQUAL");
-        AsyncStorage.setItem("device_id", fcmToken);
+        AsyncStorage.setItem("device_id", String(JSON.stringify(fcmToken)));
 
         this.notificationDisplayedListener();
         this.notificationListener();
@@ -147,11 +150,19 @@ class App extends React.Component {
       .then((responseJson) => {
         try {
           if (responseJson.hasOwnProperty("acv")) {
-            AsyncStorage.setItem("acv", responseJson.acv, () => {});
+            AsyncStorage.setItem(
+              "acv",
+              String(JSON.stringify(responseJson.acv)),
+              () => {}
+            );
           }
 
           if (responseJson.hasOwnProperty("app_type")) {
-            AsyncStorage.setItem("app_type", responseJson.app_type, () => {});
+            AsyncStorage.setItem(
+              "app_type",
+              String(JSON.stringify(responseJson.app_type)),
+              () => {}
+            );
           }
 
           if (responseJson.hasOwnProperty("main_color")) {
@@ -161,7 +172,7 @@ class App extends React.Component {
           if (responseJson.hasOwnProperty("secondary_color")) {
             AsyncStorage.setItem(
               "secondary_color",
-              responseJson.secondary_color,
+              String(JSON.stringify(responseJson.secondary_color)),
               () => {}
             );
           }
@@ -169,7 +180,7 @@ class App extends React.Component {
           if (responseJson.hasOwnProperty("grid_view_style")) {
             AsyncStorage.setItem(
               "gridViewStyle",
-              responseJson.grid_view_style,
+              String(JSON.stringify(responseJson.grid_view_style)),
               () => {}
             );
           }
@@ -177,7 +188,7 @@ class App extends React.Component {
           if (responseJson.hasOwnProperty("inventory_view")) {
             AsyncStorage.setItem(
               "inventoryView",
-              responseJson.inventory_view,
+              String(JSON.stringify(responseJson.inventory_view)),
               () => {}
             );
           }
@@ -185,7 +196,7 @@ class App extends React.Component {
           if (responseJson.hasOwnProperty("api_key_android")) {
             AsyncStorage.setItem(
               "apiKeyAndroid",
-              responseJson.api_key_android,
+              String(JSON.stringify(responseJson.api_key_android)),
               () => {}
             );
           }
@@ -193,19 +204,23 @@ class App extends React.Component {
           if (responseJson.hasOwnProperty("api_key_ios")) {
             AsyncStorage.setItem(
               "apiKeyIos",
-              responseJson.api_key_ios,
+              String(JSON.stringify(responseJson.api_key_ios)),
               () => {}
             );
           }
 
           if (responseJson.hasOwnProperty("currency")) {
-            AsyncStorage.setItem("currency", responseJson.currency, () => {});
+            AsyncStorage.setItem(
+              "currency",
+              String(JSON.stringify(responseJson.currency)),
+              () => {}
+            );
           }
 
           if (responseJson.hasOwnProperty("currency_name")) {
             AsyncStorage.setItem(
               "currency_name",
-              responseJson.currency_name,
+              String(JSON.stringify(responseJson.currency_name)),
               () => {}
             );
           }
@@ -226,7 +241,7 @@ class App extends React.Component {
           if (responseJson.hasOwnProperty("ads_settings")) {
             AsyncStorage.setItem(
               "ads_settings",
-              responseJson.ads_settings,
+              String(JSON.stringify(responseJson.ads_settings)),
               () => {}
             );
           } else {
@@ -237,10 +252,13 @@ class App extends React.Component {
         }
 
         if (responseJson.hasOwnProperty("num_of_listings")) {
-          _this.setState({
-            numOfListings: responseJson.num_of_listings,
-            redirect: true,
-          });
+          _this.setState(
+            {
+              numOfListings: responseJson.num_of_listings,
+              redirect: true,
+            },
+            () => (global.count = responseJson.num_of_listings)
+          );
         }
         //AsyncStorage.setItem("main_color", "#6b99e1", () => {});
       })

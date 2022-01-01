@@ -67,10 +67,13 @@ export default class Main extends React.Component {
         secondColor: sc,
       });
 
-      _this.setState({
-        tableHead: ["Title", "status"],
-        test: this.props.navigation.state.params.link,
-      });
+      _this.setState(
+        {
+          tableHead: ["Title", "status"],
+          test: this.props.navigation.state.params.link,
+        },
+        () => console.log("Paypal URL is", _this.state.test)
+      );
     } catch (e) {
       console.log(e);
     }

@@ -161,6 +161,7 @@ export default class Login extends React.Component {
                   underlineColorAndroid="transparent"
                   style={styles.input}
                   placeholder="Login"
+                  placeholderTextColor={"#575656"}
                   onChangeText={(text) => {
                     loginData["stm_login"] = text;
                   }}
@@ -171,6 +172,7 @@ export default class Login extends React.Component {
                   underlineColorAndroid="transparent"
                   style={styles.input}
                   placeholder="Password"
+                  placeholderTextColor={"#575656"}
                   secureTextEntry={true}
                   textContentType="password"
                   onChangeText={(text) => {
