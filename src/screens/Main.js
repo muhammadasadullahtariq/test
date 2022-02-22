@@ -24,6 +24,7 @@ import Translation from "../helpers/Translation";
 import AdvertisingComponent from "../components/AdvertisingComponent";
 import Filter from "./FilterForMainPage";
 import HeaderText from "../components/headerText";
+import gif from "../assets/img/thousand.gif";
 
 const entireScreenWidth = Dimensions.get("window").width;
 EStyleSheet.build({ $rem: entireScreenWidth / 380 });
@@ -167,9 +168,12 @@ export default class Main extends React.Component {
         >
           <View>
             <View style={{ backgroundColor: "#6b99e1" }}>
-              <HeaderText
-                text="Find your perfect car"
-                componentStyle={{ color: "white" }}
+              <Image
+                source={gif}
+                style={{
+                  height: 80,
+                  width: "100%",
+                }}
               />
             </View>
             <Filter navigation={this.props.navigation} />

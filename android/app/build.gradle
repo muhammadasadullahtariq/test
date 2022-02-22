@@ -103,10 +103,10 @@ android {
     defaultConfig {
         applicationId "com.thousandunder.motors"
         minSdkVersion 23
-        targetSdkVersion 28
+        targetSdkVersion 30
         multiDexEnabled true
-        versionCode 13
-        versionName '1.0.7'
+        versionCode 14
+        versionName '1.0.8'
     }
 
    signingConfigs {

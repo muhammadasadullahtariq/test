@@ -163,10 +163,7 @@ export default class FilterMakeChoose extends React.Component {
         <View style={styles.btnWrap}>
           <TouchableOpacity
             activeOpacity={0.8}
-            style={[
-              styles.searchButton,
-              { backgroundColor: _this.state.secondColor },
-            ]}
+            style={[styles.searchButton, { backgroundColor: "#6b99e1" }]}
             onPress={() => {
               _this.props.navigation.goBack();
               _this.props.navigation.state.params._setCheckedFilterParams(
@@ -175,12 +172,8 @@ export default class FilterMakeChoose extends React.Component {
               );
             }}
           >
-            <Ico
-              icoName="magnifier"
-              icoSize={16}
-              icoColor={GLOBALS.COLOR.white}
-            />
-            <Text style={styles.btnText}>
+            <Ico icoName="magnifier" icoSize={16} icoColor={"black"} />
+            <Text style={[styles.btnText, { color: "white" }]}>
               <Translation str="choose_model" />
             </Text>
           </TouchableOpacity>

@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
-target 'motorsReactApp' do
+target 'Thousand under' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
@@ -19,13 +19,18 @@ target 'motorsReactApp' do
 
 
 
+pod 'Thousand underTests', :path => '../node_modules/react-native-webview'
 
+  
 
-  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
-
-  target 'motorsReactAppTests' do
+  target 'Thousand underTests' do
     inherit! :search_paths
     # Pods for testing
+
+
+
+    pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
   end
 
 end

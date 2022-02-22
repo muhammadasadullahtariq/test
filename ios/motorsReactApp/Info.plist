@@ -44,7 +44,7 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Your images are used to show creating Listing Photos.</string>
+	<string>The imagines are used to upload photos of your car listing</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright 2019 StylemixThemes.</string>
 	<key>NSLocationAlwaysUsageDescription</key>

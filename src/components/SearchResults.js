@@ -135,9 +135,7 @@ function screen(props) {
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <Text>
-            <Translation str="no_results" />
-          </Text>
+          <Text>{"No Result Found"}</Text>
         </View>
       )}
     </View>

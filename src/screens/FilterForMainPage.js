@@ -578,7 +578,9 @@ export default class Filter extends React.Component {
                   icoSize={16}
                   icoColor={GLOBALS.COLOR.white}
                 />
-                <Text style={styles.btnText}>{"Search"}</Text>
+                <Text style={styles.btnText}>
+                  {"Search " + global.count + " cars"}
+                </Text>
               </TouchableOpacity>
             </View>
           </View>

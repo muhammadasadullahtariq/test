@@ -581,9 +581,7 @@ export default class Filter extends React.Component {
             </View> */}
           {/* </View> */}
           <View style={styles.similarWrap}>
-            <Text style={styles.similarMainTitle}>
-              <Translation str="recomended" />
-            </Text>
+            <Text style={styles.similarMainTitle}>{"Recommended"}</Text>
             <ScrollView horizontal={true}>
               {_.map(this.state.featured, function (data) {
                 return (
